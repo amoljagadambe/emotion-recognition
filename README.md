@@ -5,13 +5,13 @@ Flask framework for emotion recognition
 Install
 -------
 ## clone the repository
-    git clone https://github.com/gaisml/lazarus.git
-    cd lazarus
+    git clone https://github.com/amoljagadambe/emotion-recognition.git
+    cd emotion-recognition
     # checkout the correct version
     git tag  # shows the tagged versions
     git checkout latest-tag-found-above
     
-Create a virtualenv in the lazarus directory and activate it::
+Create a virtualenv in the emotion-recognition directory and activate it::
 
     python -m venv venv
     venv\Scripts\activate.bat
