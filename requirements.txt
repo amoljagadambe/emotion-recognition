@@ -1,0 +1,8 @@
+flask
+tensorflow
+keras
+librosa
+pyaudio
+wave
+matplotlib
+sklearn
