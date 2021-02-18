@@ -11,3 +11,4 @@ build/
 *.egg-info/
 .idea/
 flask-app.tar
+log/
