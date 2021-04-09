@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>The jQuery Example</title>
+
+<!--    <h2>jQuery-AJAX in FLASK. Execute function on button click</h2>-->
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"> </script>
+    <script type=text/javascript>
+     $(function()
+        { $("#startbutton").click(function (event){
+            var $el = $("#startbutton"),
+            x = 5000,
+            originalColor = $el.css("background");
+
+            $el.css("background", "green");
+            setTimeout(function(){
+            // alert('hii')
+            $el.css("background", originalColor);
+            }, x);
+
+            $.getJSON('/start_recording', { },function(data) {
+            }); return false; });});
+
+<!--    $(function()-->
+<!--        { $("#stopbutton").click(function (event)-->
+<!--    { $.getJSON('/stop_recording/', { },function(data) { }); return false; });});-->
+
+    $(function()
+        { $("#evaluate").click(function (event){
+            $.getJSON('/evaluateresult/', {
+             },
+             function(data) {
+                 console.log(data)
+                $("#result").text(data.result);
+                });
+                return false;
+             });
+        });
+    </script>
+</head>
+
+<body>
+<!--    {% if message %}-->
+<!--        <p id="result">{{ message }}</p>-->
+<!--    {% endif %}-->
+        <p id="result">?</p>
+        <input type = "button" id = "startbutton" value = "Record" />
+<!--        <input type = "button" id = "stopbutton" value = "stop" />-->
+        <input type = "button" id = "evaluate" value = "evaluateresult" />
+<!--    <span id =result>?</span>-->
+
+</body>
+
+</html>
