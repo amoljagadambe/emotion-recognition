@@ -56,7 +56,7 @@ def stop_recording(rfile):
 
 @app.route('/evaluateresult/')
 def evaluateresult():
-    file_path = "/home/hp/gais/combo_emotion_recog/record_20210406160226_trim.wav"
+    file_path = filename
     if os.path.exists(file_path):
         predicted_emotion_array = classifier.classify_audio(file_path)
         print(predicted_emotion_array[0])
